@@ -1,12 +1,12 @@
 {
   "manifest_version": 3,
   "name": "NaiLong X Manager",
-  "version": "0.3.0",
+  "version": "0.4.6",
   "description": "Local-first X following/follower collection, comparison and manual review.",
   "permissions": ["storage", "tabs", "downloads"],
   "host_permissions": ["https://x.com/*", "https://twitter.com/*"],
   "action": {"default_title": "NaiLong X Manager", "default_popup": "popup.html"},
   "background": {"service_worker": "background.js"},
-  "content_scripts": [{"matches": ["https://x.com/*", "https://twitter.com/*"], "js": ["content.js"], "run_at": "document_idle"}],
+  "content_scripts": [{"matches": ["https://x.com/*", "https://twitter.com/*"], "js": ["profiles.js", "content.js"], "run_at": "document_idle"}],
   "options_page": "dashboard.html"
 }
